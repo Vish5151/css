@@ -1,0 +1,56 @@
+<!-- Assignment 5: Creating a Simple Navigation Bar  Objective: Style a basic navigation bar using CSS.
+Instructions:
+1. Create a navigation bar with links to “Home,” “About,” “Services,” and “Contact.”
+2. In your CSS:
+o Make the links horizontal by setting display: inline-block.
+o Add padding and a background color to each link.
+o Remove the underline and set a hover effect to change the link color.
+o Center-align the entire navigation bar on the page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Assignment 5</title>
+
+    <style>
+
+
+        .navigation
+        {   
+            width: 40%;
+            border: 2px black solid;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        a
+        {
+            display: inline-block;
+            background-color: grey;
+            padding: 10px 50px;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover
+        {
+            color: white;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="navigation">
+      
+            <a href="www.home.com">Home</a>
+            <a href="www.about.com">About</a>
+            <a href="www.services.com">Services</a>
+            <a href="www.contact.com">Contact</a>
+       
+    </div>
+</body>
+</html>

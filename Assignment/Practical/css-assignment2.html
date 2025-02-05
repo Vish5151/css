@@ -1,0 +1,60 @@
+<!-- Assignment 2: Adding Backgrounds and Colors
+ Objective: Practice using colors and background properties.
+Instructions:
+1. Create an HTML page with three sections (<div> elements) labeled “Introduction,”
+“Content,” and “Footer.”
+2. Apply CSS to:
+o Give each section a different background color (use HEX or RGB values).
+o Add padding and set a specific width for each section.
+o Use a gradient background for the “Introduction” section.
+o Set a light gray background color for the entire webpage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Assignment 2</title>
+
+    <style>
+        *
+        {
+            background-color: lightgrey;
+        }
+
+        .introduction
+        {
+            background-color: red;
+            padding: 5px;
+            width: 200px;
+            background:linear-gradient(red, yellow)
+        }
+        .content
+        {
+            background-color: blue;
+            padding: 5px;
+            width: 200px;
+        }
+        .footer
+        {
+            background-color: green;
+            padding: 5px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <label for="introduction"></label>
+    <div name="introduction" class="introduction">Introduction</div>
+
+    <label for="content"></label>
+    <div name="content" class="content">Content</div>
+
+    <label for="footer"></label>
+    <div name="footer" class="footer">Footer</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- Assignment 4: Styling Lists
+ Objective: Practice customizing list styles.
+Instructions:
+1. Create an HTML page with both an ordered list and an unordered list:
+
+2. In your CSS file:
+
+o Remove default list markers using list-style-type: none.
+o Customize each list by adding a custom marker or symbol.
+o Change the font color and style for list items -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Assignment 4</title>
+
+    <style>
+
+        .no-marker
+        {
+            list-style-type: none;
+        }
+
+        .disc
+        {
+            list-style-type: square;
+        }
+
+        .roman
+        {
+            list-style-type: lower-roman;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+        
+        <ul class="no-marker">
+            <li>ul1</li>
+            <li>ul2</li>
+            <li>ul3</li>
+        </ul>
+
+        <ul class="disc">
+            <li>ul1</li>
+            <li>ul2</li>
+            <li>ul3</li>
+        </ul>
+
+        <ol class="roman">
+            <li>ol1</li>
+            <li>ol2</li>
+            <li>ol3</li>
+        </ol>
+
+    </body>
+
+</html>
