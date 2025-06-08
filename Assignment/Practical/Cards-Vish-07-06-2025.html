@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards-Vish</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .cards-container
+        {
+            background: #4C4C4C;
+            padding: 100px 0px;
+        }
+
+        .cards-row
+        {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card-col
+        {
+            width: 300px;
+            outline: 8px solid #249EFF;
+            border-radius: 50px 5px 5px 5px;
+            border-color: #249EFF;
+            position: relative;
+            padding: 200PX 20px 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .bg1, .bg12
+        {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            background: #249EFF;
+            top: 0;
+            left: 130px;
+        }
+
+        .bg2, .bg22
+        {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            background: #249EFF;
+            top: 148px;
+            left: 0;
+        }
+
+        .col2 .bg1, .col2 .bg2
+        {
+            background: #FF1F6B;
+        }
+
+        .col3 .bg1, .col3 .bg2
+        {
+            background: #98FF21;
+        }
+
+        .bg12
+        {
+            border-radius: 25px 0px 0px 0px;
+            background: #4C4C4C;
+            left: 133px;
+        }
+
+        .bg22
+        {
+            border-radius: 25px 0px 0px 0px;
+            background: #4C4C4C;
+            top: 148px;
+        }
+
+        .card-col i
+        {
+            font-size: 60px;
+            width: 135px;
+            height: 150px;
+            line-height: 130px;
+            color: #249EFF;
+            border: 8px solid #249EFF;
+            border-radius: 50px 0px 80px 0px;
+            position: absolute;
+            top:-2px;
+            left: -2px;
+        }
+        
+        .col2
+        {
+            outline: 8px solid #FF1F6B;
+        }
+
+        .col3
+        {
+            outline: 8px solid #98FF21;
+        }
+
+        .col2 i
+        {
+            background: #FF1F6B;
+            border: 8px solid #FF1F6B;
+            color: white;
+        }
+
+        .col3 i
+        {
+
+            border: 8px solid #98FF21;
+            color: #98FF21;
+        }
+
+        h4
+        {
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        p
+        {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 20px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        button
+        {
+            padding: 12px 20px;
+            font-weight: 600;
+            border-radius: 20px;
+            border:none;
+        }
+
+        .col1 button
+        {
+            background: #249EFF;
+        }
+
+        .col2 button
+        {
+            background: #FF1F6B;
+        }
+
+        .col3 button
+        {
+            background: #98FF21;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="cards-container">
+
+        <div class="cards-row">
+
+            <div class="card-col col1">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+                <h4>DESIGN</h4>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. It is a dummy text.</p>
+
+                <div class="bg1"></div>
+                <div class="bg12"></div>
+
+                <div class="bg2"></div>
+                <div class="bg22"></div>
+
+                <button>READ MORE</button>
+
+            </div>
+
+             <div class="card-col col2">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h4>DEVELOPMENT</h4>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. It is a dummy text.</p>
+
+                <div class="bg1"></div>
+                <div class="bg12"></div>
+
+                <div class="bg2"></div>
+                <div class="bg22"></div>
+
+                <button>READ MORE</button>
+
+            </div>
+
+             <div class="card-col col3">
+
+                <i class="fa-solid fa-rocket"></i>
+
+                <h4>LAUNCH</h4>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. It is a dummy text.</p>
+
+                <div class="bg1"></div>
+                <div class="bg12"></div>
+
+                <div class="bg2"></div>
+                <div class="bg22"></div>
+
+                <button>READ MORE</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

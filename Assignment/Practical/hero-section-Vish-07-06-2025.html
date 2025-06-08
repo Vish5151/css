@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero-Section</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+    <style>
+        
+         *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .section
+        {
+            padding: 0px 100px;
+        }
+
+        .header, .logo, .navigation ul, .title1, .hero-content, .card1 div, .card2 div
+        {
+            display: flex;
+        }
+
+        .header
+        {
+            flex-wrap: wrap;
+        }
+
+        .header, .card1 div, .card2 div
+        {
+            justify-content: space-between;
+        }
+
+        .logo,  .navigation ul, .title1
+        {
+            align-items: center;
+        }
+
+        .navigation ul
+        {
+            list-style-type: none;
+            gap: 50px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+        }
+
+        .navigation button
+        {
+            padding: 10px 30px;
+            color: white;
+            font-size: 16px;
+            background: transparent;
+            border: 3px solid white;
+            border-radius: 50px;            
+        }
+
+        .header
+        {
+            padding: 30px 0px;
+        }
+
+        .hero
+        {
+            background: linear-gradient(#523BAF, #100774);
+            overflow: hidden;
+        }
+        
+        .dot
+        {
+            position: absolute;
+            z-index: 0;
+        }
+
+        .logo, .hero-content
+        {
+            position: relative;
+            z-index: 1;
+            gap: 20px;
+        }
+
+        .dot
+        {
+            border-radius: 50%;
+            background: transparent;
+            background: #F1698F;
+        }
+
+        .dot1
+        {
+            height: 200px;
+            width: 200px;
+            filter: blur(65px);
+            top:-50px;
+            left:-50px;
+        }
+
+        .dot2
+        {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            filter: blur(65px);
+            right:100px;
+            top:70px;
+        }
+
+        .logo-text, .fa-globe, .fa-bars
+        {
+            color: white;
+            font-size: 22px;
+        }
+
+        .hero-text
+        {
+            width: 40%;
+            padding: 50px 0px 50px 50px;
+        }
+
+        .mobile-nav
+        {
+            display: none;
+        }
+
+        .hero-text h5
+        {
+            color: greenyellow;
+            margin-top: 5px;
+        }
+
+        .hero-text span
+        {
+            font-size: 30px;
+        }
+
+        h1
+        {
+            font-size: 75px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p
+        {
+           color: rgba(255, 255, 255, 0.6);
+           line-height: 25px;
+           font-weight: 500;
+        }
+
+        .hero-text button:first-child, .download
+        {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            border: none;
+            background: #3C5FFF;
+            color: white;
+        }
+
+        .download
+        {
+            background: transparent;
+        }
+
+        .buttons
+        {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .note
+        {
+            margin-bottom: 50px;
+        }
+
+        .note a
+        {
+            color: #ED688D;
+        }
+
+        .hero-image
+        {
+            position: relative;
+            width: 60%;
+        }
+
+        .card1, .card2
+        {
+            height: 300px;
+            width: 500px;
+            backdrop-filter: blur(10px);
+            border: 2px solid white;
+            padding: 50px 30px;
+            position: relative;
+            background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1));
+            border-radius: 25px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            color: white;
+            z-index: 5;
+            transform: rotate(15deg);
+        }
+
+         .card2
+         {
+            top: 350px;
+            transform: scale(0.8) rotate(-15deg);
+            z-index: 3;
+         }
+
+        .card1 div:first-child
+        {
+            margin-bottom: 50px;
+        }
+
+        .card1 div:nth-child(2) h2
+        {
+            margin-bottom: 40px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .card1 div:nth-child(3)
+        {
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+         .card1 div:nth-child(4) h4
+        {
+            font-size: 20px;
+        }
+
+        .circle1
+        {
+            outline: 5px solid #ED688D;
+            outline-offset: 50px;
+            height: 700px;
+            width: 700px;
+            background: linear-gradient(#7976E1,#ED688D);
+            border-radius: 50%;
+            position: absolute;
+            right: -200px;
+            top: 100px;
+            z-index: 2;
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .dot3
+        {
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(#7976E1,#ED688D);
+            border-radius: 50%;
+            position: absolute;
+            right: 400px;
+            bottom: 00px;
+            z-index: 1;
+            filter: blur(10px);
+        }
+
+        .dot4
+        {
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(#7976E1,#ED688D);
+            border-radius: 50%;
+            position: absolute;
+            left: 50px;
+            top: 300px;
+        }
+
+        .dot5
+        {
+            height: 25px;
+            width: 25px;
+            background: linear-gradient(#7976E1,#ED688D);
+            border-radius: 50%;
+            position: absolute;
+            left: 700px;
+            top: 200px;
+        }
+
+        .outer-circle1, .outer-circle2, .outer-circle3, .outer-circle4
+        {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle,transparent 50%, #7976E1 5% 0%, #ED688D 100%);
+            position: absolute;
+            left: -100px;
+            top:50px;
+        }
+
+         .outer-circle2
+         {
+            transform: scale(0.2);
+            position: absolute;
+            left: 800px;
+            top:80px;
+         }
+
+         .outer-circle3
+         {
+            background: radial-gradient(circle,transparent 30%, #140B74 5% 0%, #ED688D 100%);
+            transform: scale(0.4);
+            position: absolute;
+            left: 450px;
+            top:350px;
+            z-index: 4;
+         }
+
+         .outer-circle4
+         {
+            background: radial-gradient(circle,transparent 30%, #140B74 5% 0%, white 100%);
+            transform: scale(0.2);
+            position: absolute;
+            left: 450px;
+            top:650px;
+            z-index: 4;
+         }
+
+        @media (max-width: 1200px)
+        {
+
+            .hero-text
+            {
+                width: 50%;
+                padding: 50px 0px 50px 50px;
+            }
+                
+            h1
+            {
+                font-size: 50px;
+                color: white;
+                padding-right: 50px;
+            }
+
+            .circle1
+            {
+                transform: scale(0.8);
+                right: -350px;
+                top: 0px;
+            }
+            
+                .card1, .card2
+            {
+                
+                left: 00px;
+                top: 100px;
+                transform: scale(0.7) rotate(15deg);
+            }
+
+            .card2
+            {
+                top: 280px;
+                transform: scale(0.55) rotate(-15deg);
+                z-index: 3;
+            }
+
+             .outer-circle3
+            {
+                transform: scale(0.4);
+                left: 300px;
+                top:280px;
+            }
+
+            .dot3
+            {
+                transform: scale(0.8);
+                right: 150px;
+                bottom: 50px;
+            }
+
+            .outer-circle4
+            {
+                transform: scale(0.15);
+                left: 450px;
+                top:550px;
+            }
+
+
+                
+        }
+
+        @media (max-width: 1024px)
+        {
+            .hero-text
+            {
+                width: 60%;
+                padding: 50px 0px 50px 50px;
+            }
+                
+            h1
+            {
+                font-size: 46px;
+                color: white;
+                padding-right: 50px;
+            }
+
+        }
+
+        @media (max-width: 768px)
+        {
+
+            .section
+            {
+                padding: 0px 50px;
+            }
+
+            .navigation
+            {
+                display: none;
+            }
+
+              .mobile-nav
+            {
+                display: block;
+            }
+
+            .hero-text
+            {
+                width: 60%;
+                padding: 30px 0px 50px 50px;
+            }
+
+            h1
+            {
+                font-size: 38px;
+                color: white;
+                padding-right: 50px;
+            }
+
+            .hero-text h5,.hero-text span
+            {
+                font-size: 10px;
+            }
+
+            .circle1
+            {
+                transform: scale(0.6);
+                right: -350px;
+                top: -100px;
+            }
+            
+            .card1, .card2
+            {
+                left: -80px;
+                top: 0px;
+                transform: scale(0.6) rotate(15deg);
+            }
+
+            .card2
+            {
+                top: 150px;
+                transform: scale(0.55) rotate(-15deg);
+                z-index: 3;
+            }
+
+             .outer-circle3
+            {
+                transform: scale(0.3);
+                left: 200px;
+                top:150px;
+            }
+
+            .dot3
+            {
+                transform: scale(0.6);
+                right: 100px;
+                bottom: 50px;
+            }
+
+            .hero-text button:first-child, .download
+            {
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .buttons
+            {
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+
+             .note
+            {
+                font-size: 13px;
+            }
+
+            .outer-circle2, .outer-circle4
+            {
+                display: none;
+            }
+
+            .outer-circle1
+            {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: radial-gradient(circle,transparent 50%, #7976E1 5% 0%, #ED688D 100%);
+                position: absolute;
+                left: -50px;
+                top:50px;
+            }
+
+        }
+
+        @media (max-width: 576px)
+        {
+            .hero-text
+            {
+                width: 100%;
+            }
+
+            .hero-text h1
+            {
+                margin-top: 10px;
+            }
+
+            .dot5{
+                display: none;
+            }
+            .hero-image
+            {
+                display: none;
+
+            }
+        }
+
+    </style>
+
+<body>
+
+    <div class="hero section">
+
+
+         <div class="header">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-globe"></i>
+                <h3 class="logo-text">cashfly</h3>
+            </div>
+
+            <div class="navigation">
+
+                <ul>
+                    <li>About</li>
+                    <li>Product</li>
+                    <li>Pricing</li>
+                    <button>Sign Up</button>
+                </ul>
+            </div>
+
+            <div class="mobile-nav">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+         </div>
+
+         <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h5><span>💰</span>START SAVING YOUR MONEY</h5>
+        
+                <h1>Payments have never been easier</h1>
+
+                <p>Discover the easiest way to manage your personal finances. Save, analyse, invest, withdraw, send and receive money all over the world with no limits!</p>
+                
+                <div class="buttons"><button>Get started</button><button class="download">Download App <i class="fa-solid fa-download"></i></button></div>
+
+                <p class="note">Learn More About Digital Marketing <a href="">Here</a>
+                </p>
+                
+
+            </div>
+            <div class="hero-image">
+
+
+                
+                <div class="card1">
+
+                    <div>
+                        <img src="/Sim-card.png" alt="" height="30px">
+                        <img src="https://i0.wp.com/americassbdc.org/wp-content/uploads/2021/05/Visa-logo-white.png?ssl=1" alt="" height="30px">
+                    </div>
+
+                    <div><H2>1256 2666 8955 8955</H2></div>
+                    <div><p>Card Holder</p><p>Expires</p></div>
+                    <div><h4>Joshua Cash</h4><h4>11/27</h4></div>
+                    
+                </div>
+
+                <div class="outer-circle3"></div>
+
+                <div class="card1 card2">
+
+                    <div>
+                        <img src="/Sim-card.png" alt="" height="30px">
+                        <img src="https://i0.wp.com/americassbdc.org/wp-content/uploads/2021/05/Visa-logo-white.png?ssl=1" alt="" height="30px">
+                    </div>
+
+                    <div><H2>2666 8955 1256 8955</H2></div>
+                    <div><p>Card Holder</p><p>Expires</p></div>
+                    <div><h4>Joshua Cash</h4><h4>09/24</h4></div>
+                    
+                </div>
+
+                <div class="circle1"></div>
+
+                <div class="dot3"></div>
+
+            </div>
+
+         </div>
+         
+         <div class="dot dot1"></div>
+
+         <div class="dot dot2"></div>
+
+         <div class="dot4"></div>
+
+         <div class="dot5"></div>
+
+        <div class="outer-circle1"></div>
+
+         <div class="outer-circle2"></div>
+
+         <div class="outer-circle4"></div>
+
+    </div>
+
+</body>
+</html>
